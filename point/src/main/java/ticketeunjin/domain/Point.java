@@ -23,8 +23,8 @@ public class Point {
 
     @PostPersist
     public void onPostPersist() {
-        PointIncreased pointIncreased = new PointIncreased(this);
-        pointIncreased.publishAfterCommit();
+        //PointIncreased pointIncreased = new PointIncreased(this);
+        //pointIncreased.publishAfterCommit();
     }
 
     public static PointRepository repository() {
