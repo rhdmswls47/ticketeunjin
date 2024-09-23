@@ -18,10 +18,9 @@ public class Mypage {
 
     private String userId;
     private Integer reserveId;
-    private Integer point;
-    private Integer pointAmount;
     private String showName;
     private Integer qty;
     private Integer amount;
     private String reserveStatus;
+    private Integer point;
 }

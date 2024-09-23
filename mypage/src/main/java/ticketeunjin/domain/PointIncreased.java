@@ -12,5 +12,4 @@ public class PointIncreased extends AbstractEvent {
     private Integer reserveId;
     private String userId;
     private Integer point;
-    private Integer pointAmount;
 }
