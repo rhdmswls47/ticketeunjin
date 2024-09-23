@@ -10,7 +10,7 @@ import ticketeunjin.infra.AbstractEvent;
 public class TicketReserved extends AbstractEvent {
 
     private Integer id;
-    private String userid;
+    private Integer userid;
     private Integer showId;
     private String showName;
     private Integer qty;

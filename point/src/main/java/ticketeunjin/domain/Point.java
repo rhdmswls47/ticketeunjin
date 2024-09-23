@@ -17,8 +17,6 @@ public class Point {
     @Id
     private Integer id;
 
-    private String userId;
-
     private Integer point;
 
     private Integer reserveId;

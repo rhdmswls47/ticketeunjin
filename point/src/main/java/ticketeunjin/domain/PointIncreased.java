@@ -12,9 +12,8 @@ import ticketeunjin.infra.AbstractEvent;
 public class PointIncreased extends AbstractEvent {
 
     private Integer id;
-    private Integer reserveId;
-    private String userId;
     private Integer point;
+    private Integer reserveId;
 
     public PointIncreased(Point aggregate) {
         super(aggregate);

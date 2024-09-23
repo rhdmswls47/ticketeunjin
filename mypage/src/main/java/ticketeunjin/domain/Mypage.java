@@ -16,7 +16,7 @@ public class Mypage {
     //@GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    private String userId;
+    private Integer userId;
     private Integer reserveId;
     private String showName;
     private Integer qty;

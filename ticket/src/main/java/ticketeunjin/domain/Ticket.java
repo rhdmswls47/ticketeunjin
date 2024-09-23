@@ -30,7 +30,7 @@ public class Ticket {
 
     private Integer amount;
 
-    private String userId;
+    private Integer userId;
 
     @PostPersist
     public void onPostPersist() {
