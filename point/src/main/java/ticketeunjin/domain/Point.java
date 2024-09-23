@@ -40,26 +40,13 @@ public class Point {
     public static void increasePoint(TicketDecreased ticketDecreased) {
         //implement business logic here:
 
-        /** Example 1:  new item 
-        Point point = new Point();
-        repository().save(point);
-
-        PointIncreased pointIncreased = new PointIncreased(point);
-        pointIncreased.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(ticketDecreased.get???()).ifPresent(point->{
-            
-            point // do something
+        repository().findByUserId(ticketDecreased.getUserId()).ifPresent(point->{
+            point.setPoint(point.getPoint() + (ticketDecreased.getAmount()*0.05));
             repository().save(point);
 
             PointIncreased pointIncreased = new PointIncreased(point);
             pointIncreased.publishAfterCommit();
-
-         });
-        */
+        });
 
     }
     //>>> Clean Arch / Port Method

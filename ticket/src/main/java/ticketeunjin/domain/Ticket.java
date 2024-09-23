@@ -55,30 +55,21 @@ public class Ticket {
     public static void decreaseTicket(TicketReserved ticketReserved) {
         //implement business logic here:
 
-        /** Example 1:  new item 
-        Ticket ticket = new Ticket();
-        repository().save(ticket);
+        repository().findById(ticketReserved.getShowId()).ifPresent(ticket->{
 
-        TicketDecreased ticketDecreased = new TicketDecreased(ticket);
-        ticketDecreased.publishAfterCommit();
-        TicketSoldout ticketSoldout = new TicketSoldout(ticket);
-        ticketSoldout.publishAfterCommit();
-        */
+            if(ticket.getStock() >= ticketReserved.getQty()){
+                ticket.setStock(ticket.getStock() - ticketReserved.getQty());
+                repository().save(ticket);
 
-        /** Example 2:  finding and process
-        
-        repository().findById(ticketReserved.get???()).ifPresent(ticket->{
-            
-            ticket // do something
-            repository().save(ticket);
-
-            TicketDecreased ticketDecreased = new TicketDecreased(ticket);
-            ticketDecreased.publishAfterCommit();
-            TicketSoldout ticketSoldout = new TicketSoldout(ticket);
-            ticketSoldout.publishAfterCommit();
-
-         });
-        */
+                TicketDecreased ticketDecreased = new TicketDecreased(ticket);
+                ticketDecreased.publishAfterCommit();
+           
+            }else{
+                TicketSoldout ticketSoldout = new TicketSoldout(ticket);
+                ticketSoldout.setReserveId(ticketReserved.getId());
+            }
+           
+        });
 
     }
     //>>> Clean Arch / Port Method

@@ -79,11 +79,12 @@ public class Reservation  {
         TicketReserved ticketReserved = new TicketReserved(this);
         ticketReserved.publishAfterCommit();
         
-        
+        /*
         ticketeunjin.external.ReservationQuery reservationQuery = new ticketeunjin.external.ReservationQuery();
         ReservationApplication.applicationContext
             .getBean(ticketeunjin.external.Service.class)
             .( reservationQuery);
+        */
     }
 
 //<<< Clean Arch / Port Method
@@ -91,22 +92,10 @@ public class Reservation  {
         
         //implement business logic here:
 
-        /** Example 1:  new item 
-        Reservation reservation = new Reservation();
-        repository().save(reservation);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(ticketSoldout.get???()).ifPresent(reservation->{
-            
-            reservation // do something
+        repository().findById(ticketSoldout.getReserveId()).ifPresent(reservation->{
+            reservation.setStatus("Reservation Failed");
             repository().save(reservation);
-
-
-         });
-        */
+        });
 
         
     }
