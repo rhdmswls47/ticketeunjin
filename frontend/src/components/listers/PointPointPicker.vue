@@ -15,16 +15,13 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                ReserveId :  {{item.reserveId }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
                                 UserId :  {{item.userId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Point :  {{item.point }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                PointAmount :  {{item.pointAmount }}
+                                ReserveId :  {{item.reserveId }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
@@ -77,8 +74,6 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
-                    
-                    
                     
                     
                     

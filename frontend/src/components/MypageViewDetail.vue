@@ -13,12 +13,6 @@
                 <Number label="ReserveId" v-model="item.reserveId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="Point" v-model="item.point" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Number label="PointAmount" v-model="item.pointAmount" :editMode="editMode" @change="change" />
-            </div>
-            <div>
                 <String label="ShowName" v-model="item.showName" :editMode="editMode" @change="change" />
             </div>
             <div>
@@ -29,6 +23,9 @@
             </div>
             <div>
                 <String label="ReserveStatus" v-model="item.reserveStatus" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="Point" v-model="item.point" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
     </v-card>

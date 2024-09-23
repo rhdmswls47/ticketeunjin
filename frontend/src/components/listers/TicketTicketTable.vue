@@ -73,6 +73,7 @@
                     { text: "stock", value: "stock" },
                     { text: "status", value: "status" },
                     { text: "amount", value: "amount" },
+                    { text: "userId", value: "userId" },
                 ],
             ticket : [],
             newValue: {},
@@ -96,6 +97,7 @@
                 'stock': 0,
                 'status': '',
                 'amount': 0,
+                'userId': '',
             }
         },
         methods: {

@@ -67,10 +67,9 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "reserveId", value: "reserveId" },
                     { text: "userId", value: "userId" },
                     { text: "point", value: "point" },
-                    { text: "pointAmount", value: "pointAmount" },
+                    { text: "reserveId", value: "reserveId" },
                 ],
             point : [],
             newValue: {},
@@ -88,10 +87,9 @@
             this.values = temp.data._embedded.points;
 
             this.newValue = {
-                'reserveId': 0,
                 'userId': '',
                 'point': 0,
-                'pointAmount': 0,
+                'reserveId': 0,
             }
         },
         methods: {
