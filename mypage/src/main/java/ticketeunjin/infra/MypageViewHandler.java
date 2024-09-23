@@ -31,8 +31,8 @@ public class MypageViewHandler {
             mypage.setShowName(ticketReserved.getShowName());
             mypage.setQty(ticketReserved.getQty());
             mypage.setAmount(ticketReserved.getAmount());
-            mypage.setReserveStatus(ticketReserved.getStatus());
             mypage.setReserveId(String.valueOf(ticketReserved.getId()));
+            mypage.setReserveStatus("Reservation Requested");
             // view 레파지 토리에 save
             mypageRepository.save(mypage);
         } catch (Exception e) {
@@ -76,7 +76,29 @@ public class MypageViewHandler {
             );
             for (Mypage mypage : mypageList) {
                 // view 객체에 이벤트의 eventDirectValue 를 set 함
-                mypage.setReserveStatus(ticketSoldout.getStatus());
+                mypage.setReserveStatus("Reservation Failed");
+                // view 레파지 토리에 save
+                mypageRepository.save(mypage);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @StreamListener(KafkaProcessor.INPUT)
+    public void whenTicketDecreased_then_UPDATE_3(
+        @Payload TicketDecreased ticketDecreased
+    ) {
+        try {
+            if (!ticketDecreased.validate()) return;
+            // view 객체 조회
+
+            List<Mypage> mypageList = mypageRepository.findByReserveId(
+                ticketDecreased.getReserveId()
+            );
+            for (Mypage mypage : mypageList) {
+                // view 객체에 이벤트의 eventDirectValue 를 set 함
+                mypage.setReserveStatus("Reservation Completed");
                 // view 레파지 토리에 save
                 mypageRepository.save(mypage);
             }
