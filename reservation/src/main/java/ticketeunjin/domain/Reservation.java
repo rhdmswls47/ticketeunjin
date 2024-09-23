@@ -29,7 +29,7 @@ public class Reservation  {
     
     
     
-    private Integer userid;
+    private Integer userId;
     
     
     

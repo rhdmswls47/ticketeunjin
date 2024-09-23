@@ -27,7 +27,7 @@ public class MypageViewHandler {
             // view 객체 생성
             Mypage mypage = new Mypage();
             // view 객체에 이벤트의 Value 를 set 함
-            mypage.setUserId(ticketReserved.getUserid());
+            mypage.setUserId(ticketReserved.getUserId());
             mypage.setShowName(ticketReserved.getShowName());
             mypage.setQty(ticketReserved.getQty());
             mypage.setAmount(ticketReserved.getAmount());

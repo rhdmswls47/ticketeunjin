@@ -34,14 +34,14 @@ public class Ticket {
 
     @PostPersist
     public void onPostPersist() {
-        TicketDecreased ticketDecreased = new TicketDecreased(this);
-        ticketDecreased.publishAfterCommit();
+        //TicketDecreased ticketDecreased = new TicketDecreased(this);
+        //ticketDecreased.publishAfterCommit();
     }
 
     @PostUpdate
     public void onPostUpdate() {
-        TicketSoldout ticketSoldout = new TicketSoldout(this);
-        ticketSoldout.publishAfterCommit();
+       // TicketSoldout ticketSoldout = new TicketSoldout(this);
+        //ticketSoldout.publishAfterCommit();
     }
 
     public static TicketRepository repository() {
@@ -57,8 +57,12 @@ public class Ticket {
 
         repository().findById(ticketReserved.getShowId()).ifPresent(ticket->{
 
+            ticket.setReserveId(ticketReserved.getId());
+            ticket.setUserId(ticketReserved.getUserId());
+
             if(ticket.getStock() >= ticketReserved.getQty()){
                 ticket.setStock(ticket.getStock() - ticketReserved.getQty());
+                ticket.setStatus("Reservation Completed");
                 repository().save(ticket);
 
                 TicketDecreased ticketDecreased = new TicketDecreased(ticket);
@@ -66,7 +70,9 @@ public class Ticket {
            
             }else{
                 TicketSoldout ticketSoldout = new TicketSoldout(ticket);
-                ticketSoldout.setReserveId(ticketReserved.getId());
+                ticketSoldout.setReserveId(ticketReserved.getShowId());
+                ticketSoldout.setStatus("Reservation Failed");
+                ticketSoldout.publishAfterCommit();
             }
            
         });

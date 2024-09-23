@@ -38,8 +38,8 @@ public class Point {
     public static void increasePoint(TicketDecreased ticketDecreased) {
         //implement business logic here:
 
-        repository().findByUserId(ticketDecreased.getUserId()).ifPresent(point->{
-            point.setPoint(point.getPoint() + (ticketDecreased.getAmount()*0.05));
+        repository().findById(ticketDecreased.getUserId()).ifPresent(point->{
+            point.setPoint(point.getPoint() + (int)(ticketDecreased.getAmount()*0.05));
             repository().save(point);
 
             PointIncreased pointIncreased = new PointIncreased(point);
