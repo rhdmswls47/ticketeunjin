@@ -8,5 +8,5 @@ import ticketeunjin.domain.*;
 @RepositoryRestResource(collectionResourceRel = "mypages", path = "mypages")
 public interface MypageRepository
     extends PagingAndSortingRepository<Mypage, Long> {
-    List<Mypage> findByReserveId(String reserveId);
+    List<Mypage> findByReserveId(Integer reserveId);
 }
