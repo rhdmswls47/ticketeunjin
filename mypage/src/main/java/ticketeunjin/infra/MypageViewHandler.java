@@ -31,7 +31,7 @@ public class MypageViewHandler {
             mypage.setShowName(ticketReserved.getShowName());
             mypage.setQty(ticketReserved.getQty());
             mypage.setAmount(ticketReserved.getAmount());
-            mypage.setReserveId(String.valueOf(ticketReserved.getId()));
+            mypage.setReserveId(ticketReserved.getId());
             mypage.setReserveStatus("Reservation Requested");
             // view 레파지 토리에 save
             mypageRepository.save(mypage);
