@@ -17,13 +17,11 @@ public class Point {
     @Id
     private Integer id;
 
-    private Integer reserveId;
-
     private String userId;
 
     private Integer point;
 
-    private Integer pointAmount;
+    private Integer reserveId;
 
     @PostPersist
     public void onPostPersist() {

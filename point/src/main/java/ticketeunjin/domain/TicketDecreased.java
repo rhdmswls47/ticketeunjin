@@ -16,4 +16,5 @@ public class TicketDecreased extends AbstractEvent {
     private Integer stock;
     private String status;
     private Integer amount;
+    private String userId;
 }
