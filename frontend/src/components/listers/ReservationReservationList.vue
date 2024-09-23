@@ -51,7 +51,7 @@
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Userid :  {{data.userid }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Userid :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ShowId :  {{data.showId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ShowName :  {{data.showName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Qty :  {{data.qty }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -124,7 +124,7 @@
             this.values = temp.data._embedded.reservations;
             
             this.newValue = {
-                'userid': 0,
+                'userId': 0,
                 'showId': 0,
                 'showName': '',
                 'qty': 0,

@@ -67,7 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "userid", value: "userid" },
+                    { text: "userId", value: "userId" },
                     { text: "showId", value: "showId" },
                     { text: "showName", value: "showName" },
                     { text: "qty", value: "qty" },
@@ -90,7 +90,7 @@
             this.values = temp.data._embedded.reservations;
 
             this.newValue = {
-                'userid': 0,
+                'userId': 0,
                 'showId': 0,
                 'showName': '',
                 'qty': 0,

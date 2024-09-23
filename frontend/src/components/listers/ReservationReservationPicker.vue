@@ -15,7 +15,7 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                Userid :  {{item.userid }}
+                                Userid :  {{item.userId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 ShowId :  {{item.showId }}

@@ -35,7 +35,7 @@ mvn spring-boot:run
 ## Test by API
 - reservation
 ```
- http :8088/reservations id="id" userid="userid" showId="showId" showName="showName" qty="qty" amount="amount" status="status" 
+ http :8088/reservations id="id" userId="userId" showId="showId" showName="showName" qty="qty" amount="amount" status="status" 
 ```
 - ticket
 ```

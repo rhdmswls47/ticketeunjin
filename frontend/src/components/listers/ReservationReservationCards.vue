@@ -109,7 +109,7 @@
             me.values = temp.data._embedded.reservations;
             
             me.newValue = {
-                'userid': 0,
+                'userId': 0,
                 'showId': 0,
                 'showName': '',
                 'qty': 0,
