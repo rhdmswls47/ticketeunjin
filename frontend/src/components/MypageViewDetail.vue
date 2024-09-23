@@ -7,7 +7,7 @@
 
         <v-card-text>
             <div>
-                <String label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
+                <Number label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="ReserveId" v-model="item.reserveId" :editMode="editMode" @change="change" />

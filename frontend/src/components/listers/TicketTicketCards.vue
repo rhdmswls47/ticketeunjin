@@ -115,7 +115,7 @@
                 'stock': 0,
                 'status': '',
                 'amount': 0,
-                'userId': '',
+                'userId': 0,
             }
         },
         methods:{

@@ -46,7 +46,7 @@ mvn spring-boot:run
 ```
 - point
 ```
- http :8088/points id="id" userId="userId" point="point" reserveId="reserveId" 
+ http :8088/points id="id" point="point" reserveId="reserveId" 
 ```
 
 

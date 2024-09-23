@@ -24,7 +24,7 @@
                 <Number label="Amount" v-model="item.amount" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
+                <Number label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

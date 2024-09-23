@@ -109,7 +109,6 @@
             me.values = temp.data._embedded.points;
             
             me.newValue = {
-                'userId': '',
                 'point': 0,
                 'reserveId': 0,
             }
