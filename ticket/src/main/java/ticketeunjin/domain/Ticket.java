@@ -30,6 +30,8 @@ public class Ticket {
 
     private Integer amount;
 
+    private String userId;
+
     @PostPersist
     public void onPostPersist() {
         TicketDecreased ticketDecreased = new TicketDecreased(this);

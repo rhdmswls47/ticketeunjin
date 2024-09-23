@@ -39,7 +39,7 @@ mvn spring-boot:run
 ```
 - ticket
 ```
- http :8088/tickets id="id" reserveId="reserveId" showId="showId" showName="showName" stock="stock" status="status" amount="amount" 
+ http :8088/tickets id="id" reserveId="reserveId" showId="showId" showName="showName" stock="stock" status="status" amount="amount" userId="userId" 
 ```
 - mypage
 ```
