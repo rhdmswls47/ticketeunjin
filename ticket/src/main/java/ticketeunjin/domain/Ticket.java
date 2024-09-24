@@ -59,6 +59,7 @@ public class Ticket {
 
             ticket.setReserveId(ticketReserved.getId());
             ticket.setUserId(ticketReserved.getUserId());
+            ticket.setAmount(ticketReserved.getAmount());
 
             if(ticket.getStock() >= ticketReserved.getQty()){
                 ticket.setStock(ticket.getStock() - ticketReserved.getQty());
@@ -70,7 +71,7 @@ public class Ticket {
            
             }else{
                 TicketSoldout ticketSoldout = new TicketSoldout(ticket);
-                ticketSoldout.setReserveId(ticketReserved.getShowId());
+                ticketSoldout.setReserveId(ticketReserved.getId());
                 ticketSoldout.setStatus("Reservation Failed");
                 ticketSoldout.publishAfterCommit();
             }

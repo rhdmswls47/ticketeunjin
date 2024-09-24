@@ -40,6 +40,7 @@ public class Point {
 
         repository().findById(ticketDecreased.getUserId()).ifPresent(point->{
             point.setPoint(point.getPoint() + (int)(ticketDecreased.getAmount()*0.05));
+            point.setReserveId(ticketDecreased.getReserveId());
             repository().save(point);
 
             PointIncreased pointIncreased = new PointIncreased(point);
