@@ -146,6 +146,7 @@ Pipeline CD
 ![image](https://github.com/user-attachments/assets/eb700996-0b0f-4cd0-a5ff-adfb9b0857e4)
 ![image](https://github.com/user-attachments/assets/101cc0bf-9681-41ae-9353-7727c22a5dca)
 
+
 ### 2. 컨테이너 자동확장 - HPA
 Auto Scale out 설정
 
@@ -160,11 +161,11 @@ Auto Scale out 확인
 
 ![image](https://github.com/user-attachments/assets/6739a5d5-f6fd-4c08-a22e-3945ff2dfb62)
 
-### 3. 컨테이너로부터 환경분리 - ConfigMap/Secret
-패스워드 값을 저장하는 Secret 생성 및 확인  
-![image](https://github.com/user-attachments/assets/ab662659-2381-4d0f-8319-14a7b2d5c671)
 
-그라파나 설정하는부분 할때 또 붙이기
+### 3. 컨테이너로부터 환경분리 - ConfigMap/Secret
+사용할 수 있는 config를 ConfigMap에 저장하여 사용  
+![image](https://github.com/user-attachments/assets/6a62448a-5a78-4579-807d-27d5de8b47b1)
+
 
 ### 4. 클라우드스토리지 활용 - PVC
 yaml로 pvc 생성
@@ -177,16 +178,19 @@ NFS볼륨을 가지는 예약서비스 배포
 파일시스템 마운트 확인, 다른pod에서도 확인
 ![image](https://github.com/user-attachments/assets/9a913de2-009f-417b-90d5-2f2a9e18867c)
 
+
 ### 5. 셀프 힐링/무정지배포 - Liveness/Rediness Probe
 
 readinessProbe설정, siege 실행 중 버전 바꾸어 재배포  
 ![image](https://github.com/user-attachments/assets/b6eeeeba-9d63-4892-aa71-d03750fe9bb3)
 ![image](https://github.com/user-attachments/assets/6ce2286d-61c1-426e-90fc-58df0ed5d0ea)
 
+
 ### 6. 서비스 메쉬 응용 - Mesh
 istio 설정 후 모든 pod 2/2 확인  
 ![image](https://github.com/user-attachments/assets/6db7ab5c-b46e-4c4d-b878-a5dad8cd12d7)
 ![image](https://github.com/user-attachments/assets/d84bd245-46a8-4d0c-9af6-8505fb9a3d72)
+
 
 ### 7. 통합 모니터링 - Loggregation/Monitoring
 Prometheus 사용, siege로 요청 보내고 모니터링
