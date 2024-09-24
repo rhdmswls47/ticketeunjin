@@ -66,10 +66,10 @@ pipeline {
                 script {
                     sh "az aks get-credentials --resource-group ${RESOURCE_GROUP} --name ${AKS_CLUSTER}"
                     sh """
-                    sed 's/latest/v${env.BUILD_ID}/g' mypage/kubernetes/deploy.yaml > output.yaml
+                    sed 's/latest/v${env.BUILD_ID}/g' reservation/kubernetes/deploy.yaml > output.yaml
                     cat output.yaml
                     kubectl apply -f output.yaml
-                    kubectl apply -f mypage/kubernetes/service.yaml
+                    kubectl apply -f reservation/kubernetes/service.yaml
                     rm output.yaml
                     """
                 }
