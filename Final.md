@@ -3,6 +3,8 @@
 
 * 클라우드 네이티브 모델링 (Biz.) 
 1. 도메인분석 - 이벤트스토밍
+![image](https://github.com/user-attachments/assets/003a9fd8-2ef0-42da-b379-586eb356b7cc)
+
 
 * 클라우드 네이티브 개발 MSA (Dev.) 
 1. 분산트랜잭션 - Saga
