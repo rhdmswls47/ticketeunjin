@@ -1,6 +1,6 @@
 # 클라우드 네이티브 아키텍처 (IaaS) 
 ### 1. 클라우드 아키텍처 구성, MSA 아키텍처 구성도
-
+![image](https://github.com/user-attachments/assets/4c8a2a09-83a9-4311-942b-8908ad42a613)
 # 클라우드 네이티브 모델링 (Biz.) 
 ### 1. 도메인분석 - 이벤트스토밍
 - 고객이 예매하고 싶은 공연을 예매한다
@@ -167,7 +167,28 @@ Auto Scale out 확인
 그라파나 설정하는부분 할때 또 붙이기
 
 ### 4. 클라우드스토리지 활용 - PVC
-### 5. 셀프 힐링/무정지배포 - Liveness/Rediness Probe
-### 6. 서비스 메쉬 응용 - Mesh
-### 7. 통합 모니터링 - Loggregation/Monitoring
+yaml로 pvc 생성
+![image](https://github.com/user-attachments/assets/4ef2ab1b-45bb-4194-b14e-a9afd8e52b22)
+![image](https://github.com/user-attachments/assets/264a6da1-d33b-470c-9990-1fa4e6b01e55)
 
+NFS볼륨을 가지는 예약서비스 배포
+![image](https://github.com/user-attachments/assets/4534a867-5f99-4085-876e-f53fa862cd69)
+
+파일시스템 마운트 확인, 다른pod에서도 확인
+![image](https://github.com/user-attachments/assets/9a913de2-009f-417b-90d5-2f2a9e18867c)
+
+### 5. 셀프 힐링/무정지배포 - Liveness/Rediness Probe
+
+readinessProbe설정, siege 실행 중 버전 바꾸어 재배포  
+![image](https://github.com/user-attachments/assets/b6eeeeba-9d63-4892-aa71-d03750fe9bb3)
+![image](https://github.com/user-attachments/assets/6ce2286d-61c1-426e-90fc-58df0ed5d0ea)
+
+### 6. 서비스 메쉬 응용 - Mesh
+istio 설정 후 모든 pod 2/2 확인  
+![image](https://github.com/user-attachments/assets/6db7ab5c-b46e-4c4d-b878-a5dad8cd12d7)
+![image](https://github.com/user-attachments/assets/d84bd245-46a8-4d0c-9af6-8505fb9a3d72)
+
+### 7. 통합 모니터링 - Loggregation/Monitoring
+Prometheus 사용, siege로 요청 보내고 모니터링
+![image](https://github.com/user-attachments/assets/fbd7f57f-b700-4ede-8c86-d92f0f714d5e)
+![image](https://github.com/user-attachments/assets/073456a0-4099-4737-b8f2-f32ceb424f5d)
