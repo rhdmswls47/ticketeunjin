@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ticket
-          image: "username/ticket:latest"
+          image: "user01.azurecr.io/ticket:latest"
           ports:
             - containerPort: 8080
           readinessProbe:
