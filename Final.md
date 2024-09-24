@@ -136,6 +136,16 @@ mypages 조회
 
 # 클라우드 네이티브 운영 (PaaS) 
 ### 1. 클라우드 배포 - Container 운영
+Azure DevOps를 사용하여 reservation CI/CD 진행  
+
+Pipeline CI  
+![image](https://github.com/user-attachments/assets/a8ef4254-a96e-4c90-ad18-55424749ab36)
+![image](https://github.com/user-attachments/assets/c0e9ee08-3d70-4af2-afea-4a44cc79a472)
+
+Pipeline CD
+![image](https://github.com/user-attachments/assets/eb700996-0b0f-4cd0-a5ff-adfb9b0857e4)
+![image](https://github.com/user-attachments/assets/101cc0bf-9681-41ae-9353-7727c22a5dca)
+
 ### 2. 컨테이너 자동확장 - HPA
 Auto Scale out 설정
 
