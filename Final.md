@@ -137,7 +137,25 @@ mypages 조회
 # 클라우드 네이티브 운영 (PaaS) 
 ### 1. 클라우드 배포 - Container 운영
 ### 2. 컨테이너 자동확장 - HPA
+Auto Scale out 설정
+
+    kubectl scale deploy order --replicas=3
+    kubectl autoscale deployment order --cpu-percent=50 --min=1 --max=3
+
+![image](https://github.com/user-attachments/assets/14d10e9d-bcde-464c-ab69-23c0af39245f)
+
+Auto Scale out 확인  
+
+    siege -c20 -t40S -v http://reservation:8080/reservations
+
+![image](https://github.com/user-attachments/assets/6739a5d5-f6fd-4c08-a22e-3945ff2dfb62)
+
 ### 3. 컨테이너로부터 환경분리 - ConfigMap/Secret
+패스워드 값을 저장하는 Secret 생성 및 확인  
+![image](https://github.com/user-attachments/assets/ab662659-2381-4d0f-8319-14a7b2d5c671)
+
+그라파나 설정하는부분 할때 또 붙이기
+
 ### 4. 클라우드스토리지 활용 - PVC
 ### 5. 셀프 힐링/무정지배포 - Liveness/Rediness Probe
 ### 6. 서비스 메쉬 응용 - Mesh
