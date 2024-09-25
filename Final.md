@@ -150,8 +150,8 @@ Pipeline CD
 ### 2. 컨테이너 자동확장 - HPA
 Auto Scale out 설정
 
-    kubectl scale deploy order --replicas=3
-    kubectl autoscale deployment order --cpu-percent=50 --min=1 --max=3
+    kubectl scale deploy reservation --replicas=3
+    kubectl autoscale deployment reservation --cpu-percent=50 --min=1 --max=3
 
 ![image](https://github.com/user-attachments/assets/14d10e9d-bcde-464c-ab69-23c0af39245f)
 
